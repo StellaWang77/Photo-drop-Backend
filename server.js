@@ -12,9 +12,11 @@ app.get('/', (req, res) => {
 app.get('/express', (req, res) => {
   res.send('Expresssss!');
 });
-app.post('/log', (req, res) => {
+app.post('/login', async (req, res) => {
+  const { email, password} = req.body;
   console.log('前端点击了按钮');
-  res.send('Logged!');
+  console.log(email)
+  res.send(`email is ${email}`);
 });
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
