@@ -20,3 +20,4 @@ pool.query('SELECT NOW()', (err, res) => {
     console.log('Database connection successful, current time:', res.rows[0]);
   }
 });
+module.exports = pool;
